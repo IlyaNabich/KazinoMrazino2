@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "G:\\repos\\KazinoMrazino2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{ABA8075D-7958-490B-A720-8C2AF7D14E0E}|KazinoMrazino2\\KazinoMrazino2.csproj|g:\\repos\\kazinomrazino2\\kazinomrazino2\\mainalgoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ABA8075D-7958-490B-A720-8C2AF7D14E0E}|KazinoMrazino2\\KazinoMrazino2.csproj|solutionrelative:kazinomrazino2\\mainalgoritm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ABA8075D-7958-490B-A720-8C2AF7D14E0E}|KazinoMrazino2\\KazinoMrazino2.csproj|g:\\repos\\kazinomrazino2\\kazinomrazino2\\mainalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ABA8075D-7958-490B-A720-8C2AF7D14E0E}|KazinoMrazino2\\KazinoMrazino2.csproj|solutionrelative:kazinomrazino2\\mainalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ABA8075D-7958-490B-A720-8C2AF7D14E0E}|KazinoMrazino2\\KazinoMrazino2.csproj|g:\\repos\\kazinomrazino2\\kazinomrazino2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,7 +45,8 @@
               "ToolTip": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainWindow.xaml",
               "RelativeToolTip": "KazinoMrazino2\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-05T12:17:47.36Z"
+              "WhenOpened": "2025-06-05T12:17:47.36Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -55,7 +56,7 @@
               "RelativeDocumentMoniker": "KazinoMrazino2\\MainWindow.xaml.cs",
               "ToolTip": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainWindow.xaml.cs",
               "RelativeToolTip": "KazinoMrazino2\\MainWindow.xaml.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAADwv2QAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAF0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-05T12:17:46.701Z",
               "EditorCaption": ""
@@ -63,14 +64,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainAlgoritm.cs",
-              "DocumentMoniker": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainAlgoritm.cs",
-              "RelativeDocumentMoniker": "KazinoMrazino2\\MainAlgoritm.cs",
-              "ToolTip": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainAlgoritm.cs",
-              "RelativeToolTip": "KazinoMrazino2\\MainAlgoritm.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAADwv1AAAAAAAAAAAAAAAA==",
+              "Title": "MainAlgorithm.cs",
+              "DocumentMoniker": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainAlgorithm.cs",
+              "RelativeDocumentMoniker": "KazinoMrazino2\\MainAlgorithm.cs",
+              "ToolTip": "G:\\repos\\KazinoMrazino2\\KazinoMrazino2\\MainAlgorithm.cs",
+              "RelativeToolTip": "KazinoMrazino2\\MainAlgorithm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T10:20:25.39Z",
+              "WhenOpened": "2025-06-18T11:57:38.123Z",
               "EditorCaption": ""
             },
             {

@@ -138,7 +138,7 @@
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="dep_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="355,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsHitTestVisible="True" Background="{x:Null}" BorderBrush="Black" SelectionBrush="{x:Null}" Foreground="#FFFEE434" FontSize="20" Text="0" FontFamily="Bernard MT Condensed" TextAlignment="Center">
+        <TextBox x:Name="dep_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="355,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="Black" SelectionBrush="{x:Null}" Foreground="#FFFEE434" FontSize="20" Text="0" FontFamily="Bernard MT Condensed" TextAlignment="Center" Focusable="False">
             <TextBox.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </TextBox.Effect>

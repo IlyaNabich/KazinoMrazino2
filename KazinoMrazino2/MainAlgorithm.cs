@@ -1,24 +1,25 @@
 ﻿using System.Diagnostics;
-using System.Reflection.Metadata;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
 namespace KazinoMrazino2
 {
-    class MainAlgorithm
+    internal static class MainAlgorithm
     {
         private static List<Image>? _midImages;
         private static List<Image>? _topImages;
         private static List<Image>? _botImages;
         private static int _deposit;
         private static int _balance;
-        public static int winBalance;
+        private static int _winBalance;
+        public static int GetDeposit() => _deposit;
+        public static int GetBalance() => _balance;
 
         public static void SetAlgorithmComponent(List<Image> mid, List<Image> top, List<Image> bot, string depString, int balString, int winString)
         {
             _deposit = int.Parse(depString);
             _balance = balString;
-            winBalance = winString;
+            _winBalance = winString;
             _midImages = mid;
             _topImages = top;
             _botImages = bot;
@@ -61,20 +62,22 @@ namespace KazinoMrazino2
             if (_midImages![0].Source.ToString() == _midImages[1].Source.ToString() && _midImages[0].Source.ToString() == _midImages[2].Source.ToString())
             {
                 Debug.WriteLine("MAX WIN");
+                _balance -= _deposit;
                 return _balance + _deposit;
             }
             else
             {
+                _balance -= _deposit;
                 return _balance - _deposit;
             }
-
         }
         public static void SetDeposit(string depInput)
         {
-            int.TryParse(depInput, out var depOut);
-            _deposit = depOut == 0 ? 0 : _deposit += depOut;
+            int.TryParse(depInput, out int depOut);
+            _deposit = depOut ==0 ? 0 : _deposit += depOut;
+            _deposit = _deposit < 0 ? 0 : _deposit;
             Debug.WriteLine(_deposit);
-            //return deposit.ToString();
+            //return _deposit.ToString();
         }
     }
 }

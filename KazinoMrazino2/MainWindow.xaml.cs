@@ -39,10 +39,10 @@ public partial class MainWindow
             Deposit = 1000,
             WinBalance = 0,
         };
-        MainAlgorithm.SetAlgorithmComponent(midImageControls, topImageControls, botImageControls, dep_TextBox.Text, defaultPlayer.Balance, defaultPlayer.WinBalance);
-        MainAlgorithm.DefaultSlot();
         balance_label.Content = ($"Balance {defaultPlayer.Balance}");
         dep_TextBox.Text = defaultPlayer.Deposit.ToString();
+        MainAlgorithm.SetAlgorithmComponent(midImageControls, topImageControls, botImageControls, dep_TextBox.Text, defaultPlayer.Balance, defaultPlayer.WinBalance);
+        MainAlgorithm.DefaultSlot();
         Debug.WriteLine(defaultPlayer.Deposit);
     }
     private async void Spin_Button_Click(object sender, RoutedEventArgs e)
@@ -58,33 +58,37 @@ public partial class MainWindow
         Spin_Button.IsEnabled = true;
     }
     private void Dep_button_1_click(object sender, RoutedEventArgs e)
-    {
-        //dep_TextBox.Text = 
-            MainAlgorithm.SetDeposit(((TextBlock)dep_button_1.Content)?.Text!);
+    {       
+        MainAlgorithm.SetDeposit(((TextBlock)dep_button_1.Content)?.Text!);
+        dep_TextBox.Text = MainAlgorithm.GetDeposit().ToString(); // 🔄 Обновление UI
+        balance_label.Content = $"Balance {MainAlgorithm.GetBalance()}"; // 🔄 Обновление баланса
     }
     
     private void Dep_button_2_click(object sender, RoutedEventArgs e)
-    {
-        //dep_TextBox.Text = 
-            MainAlgorithm.SetDeposit(((TextBlock)dep_button_2.Content)?.Text!);
+    {        
+        MainAlgorithm.SetDeposit(((TextBlock)dep_button_2.Content)?.Text!);
+        dep_TextBox.Text = MainAlgorithm.GetDeposit().ToString(); // 🔄 Обновление UI
+        balance_label.Content = $"Balance {MainAlgorithm.GetBalance()}"; // 🔄 Обновление баланса
     }
 
     private void Dep_button_3_click(object sender, RoutedEventArgs e)
-    {
-        //dep_TextBox.Text = 
-            MainAlgorithm.SetDeposit(((TextBlock)dep_button_3.Content)?.Text!);
+    {        
+        MainAlgorithm.SetDeposit(((TextBlock)dep_button_3.Content)?.Text!);
+        dep_TextBox.Text = MainAlgorithm.GetDeposit().ToString(); // 🔄 Обновление UI
+        balance_label.Content = $"Balance {MainAlgorithm.GetBalance()}"; // 🔄 Обновление баланса
     }
 
     private void Dep_button_4_click(object sender, RoutedEventArgs e)
-    {
-        //dep_TextBox.Text = 
-            MainAlgorithm.SetDeposit(((TextBlock)dep_button_4.Content)?.Text!);
+    {        
+        MainAlgorithm.SetDeposit(((TextBlock)dep_button_4.Content)?.Text!);
+        dep_TextBox.Text = MainAlgorithm.GetDeposit().ToString(); // 🔄 Обновление UI
+        balance_label.Content = $"Balance {MainAlgorithm.GetBalance()}"; // 🔄 Обновление баланса
     }
 
     private void Dep_button_5_click(object sender, RoutedEventArgs e)
     {
-        //dep_TextBox.Text = 
-            MainAlgorithm.SetDeposit(((TextBlock)dep_button_5.Content)?.Text!);
-        
+        MainAlgorithm.SetDeposit(((TextBlock)dep_button_5.Content)?.Text!);
+        dep_TextBox.Text = MainAlgorithm.GetDeposit().ToString(); // 🔄 Обновление UI
+        balance_label.Content = $"Balance {MainAlgorithm.GetBalance()}"; // 🔄 Обновление баланса
     }
 }
