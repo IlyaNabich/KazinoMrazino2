@@ -1,0 +1,101 @@
+﻿using System.Media;
+using System.Text;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.Threading;
+using System.Diagnostics;
+
+
+namespace KazinoMrazino2;
+/// <summary>
+/// Interaction logic for MainWindow.xaml
+/// </summary>
+public partial class MainWindow : Window
+{
+    readonly private List<Image> midImageControls;
+    readonly private List<Image> topImageControls;
+    readonly private List<Image> botImageControls;
+    public SoundPlayer SpinSound = new(@"Resources\Sounds\spin_sound.wav");
+    private void TitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+    {
+        if (e.ChangedButton == MouseButton.Left)
+        {
+            this.DragMove();
+        }
+    }
+    private void Close_Click(object sender, RoutedEventArgs e)
+    {
+        this.Close();
+    }
+    private void Minimize_Click(object sender, RoutedEventArgs e)
+    {
+        this.WindowState = WindowState.Minimized;
+    }
+    public MainWindow()
+    {
+        InitializeComponent();
+        midImageControls = [ImageMid1, ImageMid2, ImageMid3];
+        topImageControls = [ImageTop1, ImageTop2, ImageTop3];
+        botImageControls = [ImageBot1, ImageBot2, ImageBot3];
+        var defaultPlayer = new DataSourse
+        {
+            Balance = 30000,
+            Deposit = 1000,
+            WinBalance = 0,
+        };
+        MainAlgoritm.SetAlgoritmComponent(midImageControls, topImageControls, botImageControls, dep_TextBox.Text, defaultPlayer.Balance, defaultPlayer.WinBalance);
+        MainAlgoritm.DefaultSlot();
+        balance_label.Content = ($"Balance {defaultPlayer.Balance}");
+        dep_TextBox.Text = defaultPlayer.Deposit.ToString();
+        Debug.WriteLine(defaultPlayer.Deposit);
+    }
+    private async void Spin_Button_Click(object sender, RoutedEventArgs e)
+    {
+        SpinSound.Play();
+        Spin_Button.IsEnabled = false;             
+        for(int i = 0; i < 10; i++)
+        {
+            MainAlgoritm.DefaultSlot();
+            await Task.Delay(200);
+        }            
+        balance_label.Content = $"Balance {MainAlgoritm.WinCalculator()}";
+        Spin_Button.IsEnabled = true;
+    }
+    private void Dep_button_1_click(object sender, RoutedEventArgs e)
+    {
+        //dep_TextBox.Text = 
+            MainAlgoritm.SetDeposit(((TextBlock)dep_button_1.Content)?.Text);
+    }
+    
+    private void Dep_button_2_click(object sender, RoutedEventArgs e)
+    {
+        //dep_TextBox.Text = 
+            MainAlgoritm.SetDeposit(((TextBlock)dep_button_2.Content)?.Text);
+    }
+
+    private void Dep_button_3_click(object sender, RoutedEventArgs e)
+    {
+        //dep_TextBox.Text = 
+            MainAlgoritm.SetDeposit(((TextBlock)dep_button_3.Content)?.Text);
+    }
+
+    private void Dep_button_4_click(object sender, RoutedEventArgs e)
+    {
+        //dep_TextBox.Text = 
+            MainAlgoritm.SetDeposit(((TextBlock)dep_button_4.Content)?.Text);
+    }
+
+    private void Dep_button_5_click(object sender, RoutedEventArgs e)
+    {
+        //dep_TextBox.Text = 
+            MainAlgoritm.SetDeposit(((TextBlock)dep_button_5.Content)?.Text);
+        
+    }
+}
