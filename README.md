@@ -1,4 +1,5 @@
 Disclaimer EN
+
 This project is strictly educational and is intended solely for learning purposes, including software development, game mechanics, and algorithmic simulations.
 
 ⚠ Important:
@@ -18,6 +19,7 @@ The author of this project is not responsible for any unauthorized use of the co
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Дисклеймер RU
+
 Данный проект является исключительно учебным и создан в ознакомительных целях для изучения технологий разработки, алгоритмов и игровых механик.
 
 ⚠ Важно:
