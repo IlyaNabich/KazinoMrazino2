@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:KazinoMrazino2"
+        xmlns:local="clr-namespace:KazinoMrazino2.Models"
         mc:Ignorable="d"
         Title="KazinoMrazino"
         ResizeMode="NoResize"
@@ -14,25 +14,17 @@
 
     <Grid Cursor="">
 
-        <!-- Сначала фон -->
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/Background.png" TileMode="None"/>
         </Grid.Background>
 
-        <!-- Потом структура колонок -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!-- Заголовок -->
-        <!-- Заголовок -->
         <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="316" Margin="21,121,0,0" Stroke="Black" VerticalAlignment="Top" Width="114" StrokeThickness="10"/>
-
-        <!-- Заголовок -->
         <Ellipse Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="89" Margin="8,42,0,0" Stroke="Black" VerticalAlignment="Top" Width="346" StrokeThickness="10"/>
-
-        <!-- Заголовок -->
         <Rectangle Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="110" Margin="21,121,0,0" Stroke="Black" VerticalAlignment="Top" Width="321" StrokeThickness="10" RenderTransformOrigin="0.5,0.5">
             <Rectangle.RenderTransform>
                 <TransformGroup>
@@ -57,31 +49,17 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <!-- Заголовок -->
-        <Border Background="#FF1C1C1C"
-        Height="40"
-        VerticalAlignment="Top"
-        Grid.ColumnSpan="2"
-        MouseDown="TitleBar_MouseDown">
-
+        <Border Background="#FF1C1C1C" Height="40" VerticalAlignment="Top" Grid.ColumnSpan="2" MouseDown="TitleBar_MouseDown">
             <Grid>
-                <TextBlock Text="Kazino Mrazino" Foreground="#FFFBC633" FontSize="20"
-                   VerticalAlignment="Center" Margin="15,0,0,0" FontWeight="Bold"/>
-
+                <TextBlock Text="Kazino Mrazino" Foreground="#FFFBC633" FontSize="20" VerticalAlignment="Center" Margin="15,0,0,0" FontWeight="Bold"/>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0">
-                    <Button Width="30" Height="25" Content="–" Click="Minimize_Click"
-                    Background="Transparent" BorderBrush="Transparent" Foreground="White"
-                    FontSize="16" FontWeight="Bold" Padding="0" Cursor="Hand"/>
-                    <Button Width="30" Height="25" Content="✕" Click="Close_Click"
-                    Background="Transparent" BorderBrush="Transparent" Foreground="White"
-                    FontSize="14" FontWeight="Bold" Padding="0" Cursor="Hand"/>
+                    <Button Width="30" Height="25" Content="–" Click="Minimize_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontSize="16" FontWeight="Bold" Padding="0" Cursor="Hand"/>
+                    <Button Width="30" Height="25" Content="✕" Click="Close_Click" Background="Transparent" BorderBrush="Transparent" Foreground="White" FontSize="14" FontWeight="Bold" Padding="0" Cursor="Hand"/>
                 </StackPanel>
             </Grid>
         </Border>
 
-
-        <!-- Кнопка SPIN -->
-        <Button x:Name="Spin_Button" Background="Black" BorderThickness="0" Click="Spin_Button_Click"
+        <Button x:Name="SpinButton" Background="Black" BorderThickness="0"
                 FontFamily="Baskerville Old Face" FontSize="48" FontWeight="Bold" Foreground="Black"
                 Grid.ColumnSpan="2" Margin="548,121,68,112" Content="SPIN" BorderBrush="Black" OpacityMask="Black">
             <Button.Template>
@@ -97,59 +75,58 @@
             </Button.Template>
         </Button>
 
-        <!-- Текст SPIN -->
-        <Label Content="SPIN&#xA;" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="61"
-               Margin="594,199,0,0" VerticalAlignment="Top" Width="92" FontSize="48"
-               FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="#FFFBC633" IsHitTestVisible="False"/>
-        <Image x:Name="ImageBot2"
-
-    Width="81" VerticalAlignment="Top" Margin="140,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageBot3"
-
-    Width="81" VerticalAlignment="Top" Margin="243,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageBot1"
-
-    Width="82" VerticalAlignment="Top" Margin="36,341,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid2"
-
-    Width="80" VerticalAlignment="Top" Margin="140,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid3"
-
-    Width="81" VerticalAlignment="Top" Margin="243,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid1"
-
-    Width="82" VerticalAlignment="Top"  Margin="36,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageTop3"
-
-    Width="82" VerticalAlignment="Top"  Margin="243,134,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageTop2"
-
-    Width="82" VerticalAlignment="Top"  Margin="140,136,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageTop1"
-
-    Width="81" VerticalAlignment="Top"  Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="37,134,0,0"/>
+        <Label Content="SPIN&#xA;" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="61" Margin="594,199,0,0" VerticalAlignment="Top" Width="92" FontSize="48" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="#FFFBC633" IsHitTestVisible="False"/>
+        <Image x:Name="ImageBot2" Width="81" VerticalAlignment="Top" Margin="140,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageBot3" Width="81" VerticalAlignment="Top" Margin="243,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageBot1" Width="82" VerticalAlignment="Top" Margin="36,341,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid2" Width="80" VerticalAlignment="Top" Margin="140,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid3" Width="81" VerticalAlignment="Top" Margin="243,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid1" Width="82" VerticalAlignment="Top"  Margin="36,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageTop3" Width="82" VerticalAlignment="Top"  Margin="243,134,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageTop2" Width="82" VerticalAlignment="Top"  Margin="140,136,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageTop1" Width="81" VerticalAlignment="Top"  Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="37,134,0,0"/>
         <Label Content="SLOT MASHINE" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="59" Margin="50,57,0,0" VerticalAlignment="Top" Width="306" FontFamily="Bernard MT Condensed" FontSize="48" Foreground="#FFFFE534">
             <Label.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </Label.Effect>
         </Label>
-        <Label x:Name="balance_label" Content="Balance" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="560,36,0,0" VerticalAlignment="Top" Width="230" FontSize="36" FontFamily="Bernard MT Condensed" Foreground="#FFFFE534">
+
+        <!-- ✅ ИСПРАВЛЕННЫЙ balance_label -->
+        <Label x:Name="BalanceLabel" Content="{Binding Balance, StringFormat=Balance: {0}}"
+               Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="560,36,0,0"
+               VerticalAlignment="Top" Width="230" FontSize="36" FontFamily="Bernard MT Condensed"
+               Foreground="#FFFFE534">
             <Label.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </Label.Effect>
         </Label>
-        <TextBox x:Name="dep_TextBox" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="355,377,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" IsHitTestVisible="False" Background="{x:Null}" BorderBrush="Black" SelectionBrush="{x:Null}" Foreground="#FFFEE434" FontSize="20" Text="0" FontFamily="Bernard MT Condensed" TextAlignment="Center" Focusable="False">
+
+        <!-- ✅ ИСПРАВЛЕННЫЙ dep_TextBox -->
+        <TextBox x:Name="DepTextBox" Text="{Binding Deposit}" IsReadOnly="True"
+                 Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="27" Margin="355,377,0,0"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="215"
+                 Background="{x:Null}" BorderBrush="Black" SelectionBrush="{x:Null}"
+                 Foreground="#FFFEE434" FontSize="20" FontFamily="Bernard MT Condensed"
+                 TextAlignment="Center">
             <TextBox.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </TextBox.Effect>
         </TextBox>
-        <Label x:Name="deposit_label" Content="Deposit" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="400,327,0,0" VerticalAlignment="Top" Width="126" FontSize="36" FontFamily="Bernard MT Condensed" Foreground="#FFFFE534">
+
+        <!-- ✅ ИСПРАВЛЕННЫЙ deposit_label -->
+        <Label x:Name="DepositLabel" Content="{Binding Deposit, StringFormat=Deposit: {0}}"
+               Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="400,327,0,0"
+               VerticalAlignment="Top" Width="126" FontSize="36" FontFamily="Bernard MT Condensed"
+               Foreground="#FFFFE534">
             <Label.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
             </Label.Effect>
         </Label>
+
+        <!-- Остальные кнопки без изменений -->
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="350,400,0,10" Grid.ColumnSpan="2" Width="223">
-            <Button x:Name="dep_button_1" Width="40" Height="25" Margin="5,0" Background="{x:Null}" Click="Dep_button_1_click" BorderBrush="Black">
+            <!-- Кнопки депозита -->
+            <Button x:Name="DepButton1" Width="40" Height="25" Margin="5,0" Background="{x:Null}"  BorderBrush="Black">
                 <Button.Content>
                     <TextBlock Text="-1000" Foreground="#FFFEE434" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bernard MT Condensed">
                         <TextBlock.Effect>
@@ -158,8 +135,7 @@
                     </TextBlock>
                 </Button.Content>
             </Button>
-
-            <Button x:Name="dep_button_2" Width="35" Height="25" Margin="5,0" Background="{x:Null}" Click="Dep_button_2_click" BorderBrush="Black">
+            <Button x:Name="DepButton2" Width="35" Height="25" Margin="5,0" Background="{x:Null}"  BorderBrush="Black">
                 <Button.Content>
                     <TextBlock Text="-100" Foreground="#FFFEE434" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bernard MT Condensed">
                         <TextBlock.Effect>
@@ -169,8 +145,8 @@
                 </Button.Content>
             </Button>
 
-            <Button x:Name="dep_button_3" Width="26" Height="25
-                    " Margin="5,0" Background="{x:Null}" Click="Dep_button_3_click" BorderBrush="Black">
+            <Button x:Name="DepButton3" Width="26" Height="25
+                    " Margin="5,0" Background="{x:Null}"  BorderBrush="Black">
                 <Button.Content>
                     <TextBlock Text="0" Foreground="#FFFEE434" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bernard MT Condensed">
                         <TextBlock.Effect>
@@ -180,7 +156,7 @@
                 </Button.Content>
             </Button>
 
-            <Button x:Name="dep_button_4" Width="35" Height="25" Margin="5,0" Background="{x:Null}" Click="Dep_button_4_click" BorderBrush="Black" FontFamily="Bernard MT Condensed">
+            <Button x:Name="DepButton4" Width="35" Height="25" Margin="5,0" Background="{x:Null}"  BorderBrush="Black" FontFamily="Bernard MT Condensed">
                 <Button.Content>
                     <TextBlock Text="+100" Foreground="#FFFEE434" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock.Effect>
@@ -190,7 +166,7 @@
                 </Button.Content>
             </Button>
 
-            <Button x:Name="dep_button_5" Width="40" Height="25" Margin="5,0" Background="{x:Null}" Click="Dep_button_5_click" BorderBrush="Black">
+            <Button x:Name="DepButton5" Width="40" Height="25" Margin="5,0" Background="{x:Null}"  BorderBrush="Black">
                 <Button.Content>
                     <TextBlock Text="+1000" Foreground="#FFFEE434" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Bernard MT Condensed">
                         <TextBlock.Effect>
@@ -199,7 +175,7 @@
                     </TextBlock>
                 </Button.Content>
             </Button>
-
+            
         </StackPanel>
 
     </Grid>
