@@ -15,7 +15,6 @@ public class PlayerData : INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-
     private int _deposit;
     public int Deposit
     {
@@ -26,7 +25,6 @@ public class PlayerData : INotifyPropertyChanged
             OnPropertyChanged();
         }
     }
-
     public event PropertyChangedEventHandler? PropertyChanged;
 
     private void OnPropertyChanged([CallerMemberName] string? propName = null)

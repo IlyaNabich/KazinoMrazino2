@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KazinoMrazino2.Models"
+        xmlns:models="clr-namespace:KazinoMrazino2.ViewModels"
         mc:Ignorable="d"
         Title="KazinoMrazino"
         ResizeMode="NoResize"
@@ -76,15 +77,15 @@
         </Button>
 
         <Label Content="SPIN&#xA;" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="61" Margin="594,199,0,0" VerticalAlignment="Top" Width="92" FontSize="48" FontFamily="Bernard MT Condensed" Background="{x:Null}" Foreground="#FFFBC633" IsHitTestVisible="False"/>
+        <Image x:Name="ImageBot1" Width="82" VerticalAlignment="Top" Margin="36,341,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
         <Image x:Name="ImageBot2" Width="81" VerticalAlignment="Top" Margin="140,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
         <Image x:Name="ImageBot3" Width="81" VerticalAlignment="Top" Margin="243,342,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageBot1" Width="82" VerticalAlignment="Top" Margin="36,341,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid2" Width="80" VerticalAlignment="Top" Margin="140,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid3" Width="81" VerticalAlignment="Top" Margin="243,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageMid1" Width="82" VerticalAlignment="Top"  Margin="36,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageTop3" Width="82" VerticalAlignment="Top"  Margin="243,134,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
-        <Image x:Name="ImageTop2" Width="82" VerticalAlignment="Top"  Margin="140,136,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid1" Width="82" Source="{Binding MidImage1}" VerticalAlignment="Top"  Margin="36,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid2" Width="80" Source="{Binding MidImage2}" VerticalAlignment="Top" Margin="140,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageMid3" Width="81" Source="{Binding MidImage3}" VerticalAlignment="Top" Margin="243,238,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
         <Image x:Name="ImageTop1" Width="81" VerticalAlignment="Top"  Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2" Margin="37,134,0,0"/>
+        <Image x:Name="ImageTop2" Width="82" VerticalAlignment="Top"  Margin="140,136,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+        <Image x:Name="ImageTop3" Width="82" VerticalAlignment="Top"  Margin="243,134,0,0" Height="84" HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
         <Label Content="SLOT MASHINE" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="59" Margin="50,57,0,0" VerticalAlignment="Top" Width="306" FontFamily="Bernard MT Condensed" FontSize="48" Foreground="#FFFFE534">
             <Label.Effect>
                 <DropShadowEffect Color="Black" BlurRadius="10" ShadowDepth="5" Opacity="1"/>
@@ -93,7 +94,7 @@
 
         <!-- ✅ ИСПРАВЛЕННЫЙ balance_label -->
         <Label x:Name="BalanceLabel" Content="{Binding Balance, StringFormat=Balance: {0}}"
-               Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="50" Margin="560,36,0,0"
+               Grid.ColumnSpan="2" Grid.Column="0" HorizontalAlignment="Left" Height="50" Margin="560,36,0,0"
                VerticalAlignment="Top" Width="230" FontSize="36" FontFamily="Bernard MT Condensed"
                Foreground="#FFFFE534">
             <Label.Effect>

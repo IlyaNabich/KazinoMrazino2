@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Diagnostics;
+using KazinoMrazino2.ViewModels;
 
 
 namespace KazinoMrazino2;
@@ -28,6 +29,8 @@ public partial class MainWindow : Window
     }
     public MainWindow()
     {
+        DataContext = new MainViewModel(); 
         InitializeComponent();
+        
     }
 }

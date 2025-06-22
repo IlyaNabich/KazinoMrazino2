@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KazinoMrazino2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac87a9cb3e7af36073c36f11ec9878f55c01978b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9a54bb31815ac214c2b2c0c49771a7ca6bb5e20")]
 [assembly: System.Reflection.AssemblyProductAttribute("KazinoMrazino2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KazinoMrazino2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

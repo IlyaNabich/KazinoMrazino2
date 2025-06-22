@@ -22,4 +22,3 @@ G:\repos\KazinoMrazino2\KazinoMrazino2\obj\Debug\net8.0-windows\KazinoMrazino2_C
 G:\repos\KazinoMrazino2\KazinoMrazino2\bin\Debug\net8.0-windows\Resources\Sounds\s1.wav
 G:\repos\KazinoMrazino2\KazinoMrazino2\bin\Debug\net8.0-windows\Resources\Sounds\spin_sound.wav
 G:\repos\KazinoMrazino2\KazinoMrazino2\obj\Debug\net8.0-windows\KazinoMrazino2.sourcelink.json
-G:\repos\KazinoMrazino2\KazinoMrazino2\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
